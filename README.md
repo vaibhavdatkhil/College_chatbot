@@ -1,59 +1,97 @@
 # 🎓 Balbhim College AI Chatbot
 
-AI-Powered College Helpdesk Chatbot built with React + Node.js + MongoDB + Gemini API.
+An AI-powered college helpdesk chatbot built using **React, Node.js, MongoDB, and Google Gemini API**.
+This project helps students quickly get answers to common college-related queries through an interactive chat interface.
 
 ---
 
 ## 🚀 Setup Instructions
 
-### 1. Backend Setup
-1. Open a terminal and navigate to the `backend` folder: 
+### 🔹 Backend Setup
+
+1. Open terminal and go to the backend folder:
+
    ```bash
    cd backend
    ```
-2. Install dependencies (already done if you followed the setup): 
+
+2. Install dependencies:
+
    ```bash
    npm install
    ```
-3. Open the `backend/.env` file and replace `paste_your_key_here` with your actual **Gemini API Key**. Ensure your MongoDB is running locally or provide a MongoDB Atlas URI.
-4. Start the backend server: 
+
+3. Configure environment variables:
+
+   * Open `.env` file
+   * Add your **Gemini API key**
+   * Add your **MongoDB connection URL**
+
+4. Start the backend server:
+
    ```bash
    npm run dev
    ```
-   *You should see '✅ MongoDB Connected' and '🚀 Server running...'*
 
-### 2. Frontend Setup
-1. Open a new terminal and navigate to the `frontend` folder:
+✅ If everything is correct, you’ll see:
+
+* MongoDB connected
+* Server running successfully
+
+---
+
+### 🔹 Frontend Setup
+
+1. Open a new terminal and go to frontend folder:
+
    ```bash
    cd frontend
    ```
+
 2. Install dependencies:
+
    ```bash
    npm install
    ```
-3. Start the Vite React app:
+
+3. Run the React app:
+
    ```bash
    npm run dev
    ```
-4. Open your browser to the URL provided (typically `http://localhost:3000` or `http://localhost:5173`).
+
+4. Open browser and visit:
+
+   ```
+   http://localhost:5173
+   ```
 
 ---
 
 ## 🎯 Features
-- ✅ AI chatbot powered by Google Gemini 2.5 Flash
-- ✅ Chat history saved in MongoDB
-- ✅ Modern Glassmorphism Premium UI with Dark Mode
-- ✅ Floating WhatsApp-style interactive button
-- ✅ Typing animations and smooth auto-scrolling
-- ✅ "Quick Questions" suggestion chips
+
+* 🤖 AI chatbot powered by Google Gemini API
+* 💬 Real-time conversation interface
+* 🗂 Chat history stored in MongoDB
+* 🎨 Modern UI with glassmorphism design
+* 🌙 Dark mode support
+* ⚡ Smooth animations and auto-scrolling
+* 💡 Quick question suggestions
 
 ---
 
-## 🎤 What to say in Viva
-> "Our project is an AI-powered chatbot for Balbhim College. 
-> A student types a question, it goes to our Node.js backend, 
-> which sends it to the Gemini AI API, and the response is shown 
-> in the chat window. All conversations are stored securely in MongoDB."
+## 🛠 Tech Stack
+
+* **Frontend:** React (Vite)
+* **Backend:** Node.js + Express
+* **Database:** MongoDB
+* **AI Integration:** Google Gemini API
 
 ---
-*Built with ❤️ for Balbhim College*
+
+## 📌 Project Overview
+
+This chatbot acts as a virtual assistant for students. Users can ask questions related to college information, and the system processes the query through the backend, sends it to the AI model, and returns an intelligent response instantly.
+
+All interactions are stored in the database for future reference and analysis.
+
