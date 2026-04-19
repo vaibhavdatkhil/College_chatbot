@@ -1,16 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Basic Setup -->
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title & SEO -->
     <title>Balbhim College AI Chatbot</title>
+    <meta name="description" content="AI-powered chatbot for Balbhim College students to get instant help and information." />
+    <meta name="keywords" content="AI Chatbot, College Helpdesk, Balbhim College, Student Support" />
+    <meta name="author" content="Balbhim College Team" />
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#4f46e5" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Open Graph (for sharing) -->
+    <meta property="og:title" content="Balbhim College AI Chatbot" />
+    <meta property="og:description" content="Smart AI chatbot for college help and support." />
+    <meta property="og:type" content="website" />
+
+    <!-- Styling -->
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Inter', sans-serif;
+        background: linear-gradient(135deg, #eef2ff, #ffffff);
+      }
+
+      /* Loader Screen */
+      #loader {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        z-index: 9999;
+      }
+
+      .spinner {
+        width: 40px;
+        height: 40px;
+        border: 4px solid #ddd;
+        border-top: 4px solid #4f46e5;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .loading-text {
+        margin-top: 10px;
+        font-size: 14px;
+        color: #555;
+      }
+    </style>
   </head>
+
   <body>
+    <!-- Loading Screen -->
+    <div id="loader">
+      <div class="spinner"></div>
+      <div class="loading-text">Loading Chatbot...</div>
+    </div>
+
+    <!-- React Root -->
     <div id="root"></div>
+
+    <!-- Main Script -->
     <script type="module" src="/src/main.jsx"></script>
+
+    <!-- Remove Loader after load -->
+    <script>
+      window.addEventListener("load", () => {
+        const loader = document.getElementById("loader");
+        loader.style.display = "none";
+      });
+    </script>
   </body>
 </html>
